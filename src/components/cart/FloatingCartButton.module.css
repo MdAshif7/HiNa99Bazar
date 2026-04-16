@@ -1,0 +1,66 @@
+.fab {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 20px;
+  background: var(--accent);
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(124,111,233,0.45), 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 200px;
+  animation: slideUp 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes slideUp {
+  from { transform: translateX(-50%) translateY(80px); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+.fab:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 12px 40px rgba(124,111,233,0.55), 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.fab:active {
+  transform: translateX(-50%) translateY(0);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  background: white;
+  color: var(--accent);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.price {
+  color: rgba(255,255,255,0.9);
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+}

@@ -1,0 +1,90 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+  padding: 32px 0;
+  margin-top: auto;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.brandTag {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: color var(--transition);
+  padding: 0;
+}
+
+.link:hover {
+  color: var(--accent-light);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .info { text-align: left; }
+}
+
+.deliveryNote {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--text-muted);
+}

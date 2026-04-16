@@ -1,0 +1,247 @@
+.page {
+  min-height: 100vh;
+  padding: 24px 0 120px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 24px;
+  transition: color var(--transition);
+}
+
+.back:hover { color: var(--accent-light); }
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  animation: fadeUp 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .detail {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.imageSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  background: linear-gradient(135deg, rgba(124,111,233,0.08) 0%, rgba(52,211,153,0.05) 100%);
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .imageSection {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.emojiWrap {
+  position: relative;
+  z-index: 1;
+}
+
+.emoji {
+  font-size: 100px;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.5));
+  display: block;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+.imageGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(124,111,233,0.15) 0%, transparent 70%);
+}
+
+.infoSection {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.originalPrice {
+  font-size: 20px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.stockRow {
+  display: flex;
+  gap: 8px;
+}
+
+.cartRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.addBtn {
+  height: 52px;
+  padding: 0 28px;
+  font-size: 16px;
+}
+
+.stepperRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inCartLabel {
+  font-size: 13px;
+  color: var(--green);
+  font-weight: 600;
+}
+
+.checkoutShortcut {
+  height: 52px;
+  padding: 0 20px;
+}
+
+.deliveryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.deliveryItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ——— Skeleton ——— */
+.loadingWrapper { padding: 40px 0; }
+
+.skeletonDetail {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.skeletonImg {
+  height: 360px;
+  border-radius: 0;
+}
+
+.skeletonInfo {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeletonLine {
+  height: 18px;
+  border-radius: 6px;
+}
+
+/* ——— Error ——— */
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.errorEmoji { font-size: 48px; }
+
+/* ——— Related ——— */
+.related {
+  margin-top: 48px;
+}
+
+.relatedTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .relatedGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .relatedGrid { grid-template-columns: repeat(4, 1fr); }
+}
